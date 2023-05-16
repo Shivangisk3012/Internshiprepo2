@@ -37,7 +37,7 @@ const Badgepage = () => {
       <Header title={title} />
       <Toggles />
       {/* outlet is used to render the childrens in the routes. the childrens are defined in the routes in app component */}
-      <Outlet context={{ userbadges, userbadgesids }} />
+      <Outlet context={{ userbadgesids }} />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/Toggles.css"
 
+
 const Toggles = () => {
   const location = window.location.pathname;
   // console.log("in toggle",location);
