@@ -1,10 +1,10 @@
 import "./App.css";
 import Badgepage from "./pages/Badgepage";
 import { createBrowserRouter, RouterProvider, useRoutes } from "react-router-dom";
-import Allbadges from "./components/Allbadges";
-import Popularbadges from "./components/Popularbadges";
-import Ongoingbadges from "./components/Ongoingbadges";
-import Earnedbadges from "./components/Earnedbadges";
+import Allbadges from "./Components/Allbadges";
+import Popularbadges from "./Components/Popularbadges";
+import Ongoingbadges from "./Components/Ongoingbadges";
+import Earnedbadges from "./Components/Earnedbadges";
 
 
 const routes = createBrowserRouter([

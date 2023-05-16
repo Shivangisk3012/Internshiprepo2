@@ -3,22 +3,24 @@ import { Link } from "react-router-dom";
 import "../Styles/Toggles.css"
 
 const Toggles = () => {
-  const [active, setActive] = useState(1);
+  const location = window.location.pathname;
+  // console.log("in toggle",location);
+  const [active, setActive] = useState(location);
 
-  const handleToggle = (num) => {
-    if (active === num) return;
-    setActive(num);
+  const handleToggle = (location) => {
+    if (active === location) return;
+    setActive(location);
   };
 
-  console.log(active);
+  // console.log(active);
 
   return (
     <div className="toggles">
       <Link to="/">
         <button
           className={`btn btn-primary btn-all-badges
-      ${active === 1 ? "active" : ""}`}
-          onClick={() => handleToggle(1)}
+      ${active === "/" ? "active" : ""}`}
+          onClick={() => handleToggle("/")}
         >
           All Badges
         </button>
@@ -26,8 +28,8 @@ const Toggles = () => {
       <Link to="/popular">
         <button
           className={`btn btn-primary btn-popular-badges
-      ${active === 2 ? "active" : ""}`}
-          onClick={() => handleToggle(2)}
+      ${active === "/popular" ? "active" : ""}`}
+          onClick={() => handleToggle("/popular")}
         >
           Popular Badges
         </button>
@@ -35,8 +37,8 @@ const Toggles = () => {
       <Link to="/ongoing">
         <button
           className={`btn btn-primary btn-ongoing-badges
-      ${active === 3 ? "active" : ""}`}
-          onClick={() => handleToggle(3)}
+      ${active === "/ongoing" ? "active" : ""}`}
+          onClick={() => handleToggle("/ongoing")}
         >
           Ongoing Badges
         </button>
@@ -44,8 +46,8 @@ const Toggles = () => {
       <Link to="/earned">
         <button
           className={`btn btn-primary btn-earned-badges
-      ${active === 4 ? "active" : ""}`}
-          onClick={() => handleToggle(4)}
+      ${active === "/earned" ? "active" : ""}`}
+          onClick={() => handleToggle("/earned")}
         >
           Earned Badges
         </button>
